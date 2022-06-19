@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       title: 'Telegram',
       theme: ThemeData(),
       onGenerateRoute: MyRoutes.instanse.onGenerate,
-      initialRoute: '/cart',
+      initialRoute: '/auth',
     );
   }
 }
