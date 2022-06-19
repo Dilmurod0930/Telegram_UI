@@ -1,5 +1,4 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:telegram/view/auth/state/auth_state.dart';
 import 'package:telegram_ui/screens/auth/state/auth_state.dart';
 
 class AuthCubit extends Cubit<AuthState> {
