@@ -22,6 +22,35 @@ class ChatsView extends StatelessWidget {
           style: MyTextStyleComp.myTextStyle(size: 17, weight: FontWeight.w500),
         ),
         elevation: 0,
+        actions: [
+          InkWell(child: SvgPicture.asset('assets/icons/chatsAppBarShape.svg')),
+          const SizedBox(width: 10),
+        ],
+        bottom: PreferredSize(
+          preferredSize: Size(MediaQuery.of(context).size.width, 36),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Container(
+              decoration: BoxDecoration(
+                color: ColorsConst.color767680_12,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              height: 36,
+              child: TextFormField(
+                keyboardType: TextInputType.name,
+                // cont: ,
+                controller: TextEditingController(),
+                decoration: const InputDecoration(
+                  filled: true,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.zero,
+                    borderSide: BorderSide.none,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -50,8 +79,9 @@ class ChatsView extends StatelessWidget {
                     ),
                     onLongPress: () {
                       showDialog(
-                          context: context,
-                          builder: (context) => alertDialog(context));
+                        context: context,
+                        builder: (context) => alertDialog(context),
+                      );
                     },
                   );
                 },
@@ -98,14 +128,15 @@ class ChatsView extends StatelessWidget {
             color: ColorsConst.colorFEFEFE,
           ),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              a('Mark as Unread', ''),
+              a(context, 'Mark as Unread', 'chatModalCommet'),
               const Divider(),
-              a('Mark as Unread', ''),
+              a(context, 'Pin', 'chatModalPin'),
               const Divider(),
-              a('Mark as Unread', ''),
+              a(context, 'Mute', 'chatModalMute'),
               const Divider(),
-              a('Mark as Unread', ''),
+              a(context, 'Delete', 'chatModalDelete'),
             ],
           ),
         ),
@@ -113,12 +144,30 @@ class ChatsView extends StatelessWidget {
     );
   }
 
-  Row a(text, nameSVG) {
-    return Row(
-      children: [
-        Text('$text'.tr()),
-        SvgPicture.asset('assets/icons/$nameSVG.svg')
-      ],
+  Padding a(BuildContext context, text, nameSVG) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: InkWell(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              '$text'.tr(),
+              style: MyTextStyleComp.myTextStyle(
+                size: 17,
+                weight: FontWeight.w400,
+                color: text == 'Delete'
+                    ? ColorsConst.colorFE3B30
+                    : ColorsConst.colorBlack,
+              ),
+            ),
+            SvgPicture.asset('assets/icons/$nameSVG.svg', height: 19),
+          ],
+        ),
+        onTap: () {
+          Navigator.pop(context);
+        },
+      ),
     );
   }
 }

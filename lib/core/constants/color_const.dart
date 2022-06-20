@@ -1,8 +1,10 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class ColorsConst {
   static Color colorWhite = const Color(0xffFFFFFF);
   static Color colorBlack = const Color(0xff000000);
+  static Color colorTransparent = Colors.transparent;
 
   // Telegram Authorization (1 - Page)
   static Color color007AFF = const Color(0xff007AFF);
@@ -24,10 +26,10 @@ class ColorsConst {
   static Color color545458 = const Color(0xff545458);
 
   // Telegram Chat Modal (3 - Page)
-  static Color color858E96 = const Color(0xff858E96).withOpacity(0.5);
+  static Color color858E96 = const Color(0xff858E96); //.withOpacity(0.5);
   static Color colorE1FEC6 = const Color(0xffE1FEC6);
   static Color color2B78CD = const Color(0xff2B78CD).withOpacity(0.5);
-  static Color colorFEFEFE = const Color(0xffFEFEFE).withOpacity(0.1);
+  static Color colorFEFEFE = const Color(0xffFEFEFE);
 
   // Telegram Chat (4 - Page)
   static Color color787878 = const Color(0xff787878);
@@ -40,4 +42,5 @@ class ColorsConst {
   // Telegram
   static Color color636366 = const Color(0xff636366);
   static Color colorCCE4F9 = const Color(0xffCCE4F9);
+  static Color colorC7C7CC = const Color(0xffC7C7CC);
 }
