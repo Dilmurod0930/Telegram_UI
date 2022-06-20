@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:telegram_ui/core/components/appbars/my_app_bar_profiles_comp.dart';
-import 'package:telegram_ui/core/components/containers/my_container_profiles_comp.dart';
+import 'package:telegram_ui/core/components/kontakt/my_container_profiles_comp.dart';
 import 'package:telegram_ui/core/components/my_paddingprofil_conmponents.dart';
 import 'package:telegram_ui/core/components/my_text_profiles_comp.dart';
 import 'package:telegram_ui/core/components/my_text_style_comp.dart';
@@ -34,7 +34,7 @@ class ProfileView extends StatelessWidget {
               title: Padding(
                 padding: const EdgeInsets.only(top: 8),
                 child: Text(
-                  "Nick Name",
+                  "Dima",
                   style: MyTextStyleComp.myTextStyle(
                     color: ColorsConst.colorBlack,
                     size: 20,
@@ -98,7 +98,7 @@ class ProfileView extends StatelessWidget {
                           MyTextProfilesTextComp.myTextProfilesTextComp1(
                               "Change Number"),
                           MyTextProfilesTextComp.myTextProfilesTextComp2(
-                              "+1 202 555 0147"),
+                              "+1 222 777 9934"),
                           Icon(
                             Icons.chevron_right_outlined,
                             color: ColorsConst.color3C3C43,
@@ -123,7 +123,7 @@ class ProfileView extends StatelessWidget {
                         MyTextProfilesTextComp.myTextProfilesTextComp1(
                             "Username"),
                         MyTextProfilesTextComp.myTextProfilesTextComp2(
-                            "@jacob_designer"),
+                            "@dima_dev_001"),
                         Icon(
                           Icons.chevron_right_outlined,
                           color: ColorsConst.color3C3C43,
@@ -164,7 +164,10 @@ class ProfileView extends StatelessWidget {
                 ),
               ),
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamedAndRemoveUntil(
+                  context, "/auth", (route) => false);
+            },
           ),
         ],
       ),

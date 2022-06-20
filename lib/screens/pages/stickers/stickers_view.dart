@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:telegram_ui/core/components/appbars/my_app_bart_calls_comp.dart';
-import 'package:telegram_ui/core/components/containers/my_container_stickers_comp.dart';
 import 'package:telegram_ui/core/components/dividers/my_divider_stickers_comp.dart';
 import 'package:telegram_ui/core/components/inkwells/my_inkwell_stickers_comp.dart';
+import 'package:telegram_ui/core/components/kontakt/my_container_stickers_comp.dart';
 import 'package:telegram_ui/core/components/my_row_stickers_comp.dart';
 import 'package:telegram_ui/core/components/my_text_style_comp.dart';
 import 'package:telegram_ui/core/constants/color_const.dart';

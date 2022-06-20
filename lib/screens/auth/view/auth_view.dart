@@ -36,7 +36,7 @@ class AuthView extends StatelessWidget {
                 Navigator.pushNamedAndRemoveUntil(
                   context,
                   '/cart',
-                  (route) => false,
+                  (route) => false
                 );
               },
             ),
