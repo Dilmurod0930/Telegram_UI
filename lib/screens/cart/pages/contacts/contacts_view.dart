@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:telegram_ui/core/components/appbars/my_app_bar_contacts_comp.dart';
 import 'package:telegram_ui/core/components/my_text_style_comp.dart';
 import 'package:telegram_ui/core/constants/color_const.dart';
+
 class ContactsView extends StatelessWidget {
   const ContactsView({Key? key}) : super(key: key);
 
