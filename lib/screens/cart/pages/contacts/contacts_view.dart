@@ -41,19 +41,18 @@ class ContactsView extends StatelessWidget {
                       children: [
                         InkWell(
                           child: ListTile(
-                            leading: CircleAvatar(
+                            leading: const CircleAvatar(
                               radius: 30,
-                              backgroundImage: AssetImage(
-                                  'assets/images/users/${ChatsData.chatsDate[__]['image']}.png'),
+                              backgroundImage: NetworkImage(
+                                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwzj_xB4wogYBhdri_Hx8XJPHEGAsJZEdZtA&usqp=CAU",
+                              ),
                             ),
                             title: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(ChatsData.chatsDate[__]['name']),
-                               
                               ],
                             ),
-                            
                           ),
                           onLongPress: () {
                             showDialog(
@@ -61,14 +60,13 @@ class ContactsView extends StatelessWidget {
                                 builder: (context) => alertDialog(context));
                           },
                         ),
-                        Divider()
+                        const Divider(height: 2)
                       ],
                     );
                   },
                   itemCount: ChatsData.chatsDate.length,
                 ),
               ),
-              
             ],
           ),
         ),
