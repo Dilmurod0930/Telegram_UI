@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
 class MyTextStyleComp {
@@ -11,4 +9,5 @@ class MyTextStyleComp {
       fontStyle: style ?? FontStyle.normal,
     );
   }
+
 }
